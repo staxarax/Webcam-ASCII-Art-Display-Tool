@@ -63,18 +63,20 @@ Displays your webcam feed as ASCII art in PowerShell or Command Prompt
 Streaming or other usage should be done at your own responsibility
 
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-Examples
 
-# Default example
+# Examples
+
+Default example
 python main.py --device 5 --fps 60 --width 300
 
-# Inverted colors + custom ASCII characters
+Inverted colors + custom ASCII characters
 python main.py --device 5 --fps 60 --width 300 --invert --ascii "@MW#8B%$&WM8ZO0QLCJUYXcvunxrjft/|()1{}[]?-_+~<>i!lI;:,\^`'. "
 
-# Full path example:
+Full path example:
 C:\Users\username\PycharmProjects\webcam_AA>python main.py --device 5 --fps 60 --width 300 --invert --ascii "@MW#8B%$&WM8ZO0QLCJUYXcvunxrjft/|()1{}[]?-_+~<>i!lI;:,\^`'. "
 
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
 Use Case
 
 A simple tool to display webcam feed as ASCII art in CLI (PowerShell or Command Prompt)
