@@ -15,7 +15,7 @@ PowerShellまたはコマンドプロンプト上で Webカメラ映像を ASCII
 ## 必要環境
 
 - OS: Windows 10 以降  
-- Python: 3.x 以降  
+- Python: 3.5 以降  
 - Webカメラ: 一般的なUSBカメラ  
 - CPU/GPU: 特別な要求なし  
 - 言語環境: 日本語  
@@ -52,11 +52,18 @@ pip install numpy
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 引数一覧
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝
---device	使用するカメラインデックス。
---width		ASCIIアートの横幅。
---invert	白黒反転モードを有効にする。
---ascii		使用するASCII文字列。
---fps		出力フレームレートの上限（デフォルト 30.0）")
+
+--device			使用するカメラインデックス
+--width			ASCIIアートの横幅。
+--invert			白黒反転モードを有効にする。
+--ascii			使用するASCII文字列。
+--fps			出力フレームレートの上限（デフォルト 30.0）")
+--color			通常の表示色
+--diff-color		差分の表示色
+--diff-threshold	閾値の値
+--canny-low   		Cannyエッジ検出の閾値を変更
+--canny-high		Cannyエッジ検出の閾値を変更
+--skip-frames		処理が重いときに古いフレームを捨てて最新を表示
 
 
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝
@@ -79,7 +86,7 @@ python main.py --device 5 --fps 60 --width 300
 python main.py --device 5 --fps 60 --width 300 --invert --ascii "@MW#8B%$&WM8ZO0QLCJUYXcvunxrjft/|()1{}[]?-_+~<>i!lI;:,\^`'. "
 
 フルパス実行例:
-C:\Users\username\PycharmProjects\webcam_AA>python main.py --device 5 --fps 60 --width 300 --invert --ascii "@MW#8B%$&WM8ZO0QLCJUYXcvunxrjft/|()1{}[]?-_+~<>i!lI;:,\^`'. "
+C:\Users\username\PycharmProjects\webcam_AA>python main.py --device 4 --fps 60 --color  white --width 300 --invert --skip-frames  --ascii "@MW#8B%$&WM8ZO0QLCJUYXcvunxrjft/|()1{}[]?-_+~<>i!lI;:,\^`'. "
 
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 免責

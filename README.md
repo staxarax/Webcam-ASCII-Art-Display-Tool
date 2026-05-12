@@ -2,18 +2,17 @@
 
 This program displays your webcam feed as ASCII art in the command line interface (CLI).
 
-＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
 ## Requirements
 
 - OS: Windows 10 or later  
-- Python: 3.x or later  
+- Python: 3.5 or later  
 - Webcam: Any standard USB camera  
 - CPU/GPU: No special requirements  
 
-＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
 ## Installation
+
 
 1. Install Python.
 2. Install the required libraries:
@@ -21,7 +20,6 @@ This program displays your webcam feed as ASCII art in the command line interfac
 pip install opencv-python
 pip install numpy
 
-＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
 Usage
 
@@ -31,10 +29,8 @@ Navigate to the directory containing main.py and run:
 
 python main.py
 
-
 To stop the program, press Ctrl + C or the Pause/Break key
 
-＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
 Notes
 
@@ -42,7 +38,6 @@ Without specifying arguments, the program cannot automatically detect the camera
 
 Try device indexes starting from 0.
 
-＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
 Command-line Arguments
 
@@ -53,8 +48,13 @@ Command-line Arguments
 | `--invert` | Enable inverted black-and-white mode     |
 | `--ascii`  | Custom ASCII characters to use           |
 | `--fps`    | Maximum output frame rate (default 30.0) |
+| `--color`    | Changing the displayed color |
+| `--diff-color`    | Change the difference color |
+| `--diff-threshold`    | Difference threshold value |
+| `--canny-low`    | Canny edge detection threshold (lower threshold detects more contours) |
+| `--canny-high`    |Canny edge detection threshold (lower threshold detects more contours) |
+| `--skip-frames`    | When processing is heavy, discard older frames and display the latest ones. |
 
-＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
 Purpose
 
@@ -62,18 +62,17 @@ Displays your webcam feed as ASCII art in PowerShell or Command Prompt
 
 Streaming or other usage should be done at your own responsibility
 
-＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
 # Examples
 
 Default example
-python main.py --device 5 --fps 60 --width 300
+python main.py --device 4 --fps 30 --width 300
 
 Inverted colors + custom ASCII characters
-python main.py --device 5 --fps 60 --width 300 --invert --ascii "@MW#8B%$&WM8ZO0QLCJUYXcvunxrjft/|()1{}[]?-_+~<>i!lI;:,\^`'. "
+python main.py --device 5 --fps 60 --width 300 --invert --skip-frames --ascii "@MW#8B%$&WM8ZO0QLCJUYXcvunxrjft/|()1{}[]?-_+~<>i!lI;:,\^`'. "
 
 Full path example:
-C:\Users\username\PycharmProjects\webcam_AA>python main.py --device 5 --fps 60 --width 300 --invert --ascii "@MW#8B%$&WM8ZO0QLCJUYXcvunxrjft/|()1{}[]?-_+~<>i!lI;:,\^`'. "
+C:\Users\username\PycharmProjects\webcam_AA>python main.py --device 4 --fps 60 --color  white --width 300 --invert --skip-frames  --ascii "@MW#8B%$&WM8ZO0QLCJUYXcvunxrjft/|()1{}[]?-_+~<>i!lI;:,\^`'. "
 
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
