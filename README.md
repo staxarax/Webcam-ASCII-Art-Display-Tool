@@ -83,6 +83,7 @@ A simple tool to display webcam feed as ASCII art in CLI (PowerShell or Command 
 Any streaming or other usage is at the user's own responsibility
 
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
 Disclaimer
 
 This program is provided "as-is"
